@@ -1,0 +1,7 @@
+<div>
+  <!-- 传给子组件的属性值和方法都需要在这里定义 [home] = "this"是把整个当前组件都传给子组件了，home名字可以取其他的-->
+  <app-header [title]="title" [msg]="msg" [jump]="jump" [home]="this"></app-header>
+  <button (click)="open()" *ngIf="openShow">展开</button>
+  <button (click)="close()" *ngIf="!openShow">收起</button>
+  <div class="aside" id="aside"></div>
+</div>

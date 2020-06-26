@@ -5,9 +5,30 @@
   <title>Angular7Project</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+ <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
   <app-root></app-root>
+<!--  创建组件需要用到命令行
+  ng g component components/news
+  就是创建了一个文件夹components里面有个news组件 -->
+
+<!--  创建服务
+  ng g service services/storage
+  就是创建了一个文件夹services里面有个storage服务，服务的作用是定义公共方法，可以在
+   在其他组件调用方法-->
+
+ <!--  如何使用服务
+   1、app.module.ts里面引入创建的服务，并且声明
+   import { StorageService } from './services/storage.service'
+    providers: [StorageService],//服务
+   2、在用到的组件里面
+  // 引入服务
+   import { StorageService } from '../../services/storage.service'
+//初始化
+constructor(public storage1:StorageService) {
+    //console.log(storage.get())
+    console.log(this.storage1.get())
+  } -->
 </body>
 </html>

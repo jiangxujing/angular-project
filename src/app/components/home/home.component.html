@@ -1,0 +1,9 @@
+<div>
+    <img src="assets/order-success.png "/>
+    <img [src] = 'pic'/>
+    <ul>
+      <li *ngFor="let item of list;let key = index">
+          {{key}},{{item.name}}
+      </li>
+    </ul>
+</div>

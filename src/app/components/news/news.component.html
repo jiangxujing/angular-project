@@ -1,0 +1,42 @@
+<app-header></app-header>
+<h2>我是一个新闻组件</h2>
+<div>{{title}}</div>
+<div>{{student}}</div>
+<div>{{userInfo.name}}</div>
+<div>{{message}}</div>
+<div>{{msg}}</div>
+<hr/>
+<h2>绑定属性</h2>
+<div title="我是一个div">
+  鼠标放上去看一看
+</div>
+<div [title]="student">
+  student
+</div>
+<hr/>
+<h2>解析html标签</h2>
+<div [innerHTML] = 'content'></div>
+<h2>允许做简单的运算</h2>
+<div>1+2={{1+2}}</div>
+<hr/>
+<h2>循环数组</h2>
+<ul>
+  <li *ngFor="let item of arr">
+    {{item}}
+  </li>
+</ul>
+<hr/>
+<ul>
+  <li *ngFor="let item of userList">
+    {{item.username}},{{item.age}}
+  </li>
+</ul>
+<hr/>
+<ul>
+  <li *ngFor="let item of carList">
+    {{item.cate}}
+    <div *ngFor="let i of item.list">
+        {{i.title}}--{{i.price}}
+    </div>
+  </li>
+</ul>

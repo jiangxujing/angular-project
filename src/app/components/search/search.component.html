@@ -1,0 +1,20 @@
+<div>
+  <input type="text" [(ngModel)]="keyword" />
+  <button (click)="doSearch()">搜索</button>
+  <button (click)="getHttpData()">获取http get数据</button>
+  <button (click)="postHttpData()">获取http post数据</button>
+  <button (click)="jsonpHttpData()">获取http jsonp数据</button>\
+   <button (click)="getAxiosData()">用axios获取http数据</button>
+</div>
+<hr/>
+<ul>
+  <li *ngFor="let item of historyList;let key=index">
+    {{item}}
+    <button (click)="deleteList(key)">X</button>
+  </li>
+</ul>
+<ul>
+  <li *ngFor="let item of list">
+    {{item.title}}
+  </li>
+</ul>

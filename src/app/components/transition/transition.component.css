@@ -1,0 +1,9 @@
+.aside{
+  width:200px;
+  height:100%;
+  background: pink;
+  position:absolute;
+  right:0;
+  transform: translate(100%,0);
+  transition: 2s all;
+}
